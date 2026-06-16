@@ -1,124 +1,85 @@
-📊 Market Structure Analysis System (EOD-Based)
-Overview
+# Market Structure Analysis System (EOD-Based)
 
-This project is a simplified market structure analysis framework built on end-of-day (EOD) financial data.
+A Python framework for decomposing financial markets into structured 
+feature layers using end-of-day data. The system applies a confluence 
+scoring model to produce interpretable market state classifications for 
+research and analysis purposes.
 
-It decomposes market behavior into three interpretable layers:
+---
 
-Technical features
-Institutional flow features
-Macro/regime features
+## Current Status
 
-These layers are then combined into a single confluence scoring model to produce structured market state interpretations.
+**Observation Mode** — Due to the MSCI rebalancing effective June 1, 2026, 
+the system is currently in observation mode. Full forward validation 
+begins after June 23, 2026.
 
-⚠️ Disclaimer
+---
+
+## Related Articles
+
+This project is documented in a multi-part article series on Medium.
+
+- **Part 1:** [Why IHSG Looks Random Until You Structure 
+It](https://medium.com/@cynthianoor/part-1-why-ihsg-looks-random-until-you-structure-it-a-python-based-eod-market-signal-system-867e72f6cdba) 
+— Architecture and Philosophy
+- **Part 2:** [Building the Confluence 
+Engine](https://medium.com/@cynthianoor/part-2-building-the-confluence-engine-implementation-architecture-and-data-design) 
+— Implementation and Data Design *(forthcoming)*
+
+---
+
+## System Architecture
+
+The system decomposes market behavior into three independent layers:
+
+| Layer | Description |
+| :--- | :--- |
+| **Technical features** | Momentum, trend, volatility, reversal patterns 
+|
+| **Broker flow features** | Institutional participation, accumulation, 
+distribution |
+| **Macro and regime features** | Market context, policy factors, MSCI 
+status |
+
+These layers are combined into a weighted confluence score.
+
+---
+
+## Disclaimer
 
 This project is intended for:
 
-research exploration
-data analysis education
-system design practice
+- research exploration
+- data analysis
+- education
+- system design practice
 
-It is not a trading tool and does not provide financial advice, buy/sell recommendations, or automated trading execution.
+It is **not** a trading system. It does **not** provide financial advice, 
+buy/sell recommendations, or automated trading execution.
 
-🧠 System Philosophy
+---
 
-Financial markets often appear noisy when analyzed through isolated indicators.
+## Forward Validation
 
-This system assumes:
+Empirical results will be published after the MSCI rebalancing period 
+concludes (post-June 23, 2026). See Part 4 of the article series.
 
-Market behavior becomes more interpretable when decomposed into structured feature layers.
+---
 
-Instead of predicting price direction directly, the system focuses on:
+## Author
 
-feature aggregation
-structural interpretation
-relative scoring of conditions
-🏗️ System Architecture
+Cynthia Maulina Noor
 
-The system is intentionally minimal and modular:
+Engineering + MBA candidate. Exploring EOD data systems for structured 
+market analysis using Python.
 
-market_structure_system/
+---
 
-├── main.py        → pipeline execution
-├── config.py      → system configuration
-├── data.py        → data loading and preprocessing
-├── features.py    → feature engineering layer
-├── engine.py      → confluence scoring model
-🔧 Feature Layers
-1. Technical Features
+## License
 
-Captures short-to-medium term market behavior.
+MIT
 
-Includes simplified representations of:
+---
 
-momentum
-volatility
-trend structure
-2. Flow Features
-
-Represents institutional activity signals derived from:
-
-net buying/selling pressure
-imbalance in flow activity
-3. Macro / Regime Features
-
-Captures broader market environment characteristics:
-
-trend context
-volatility regime approximation
-⚙️ Confluence Engine
-
-All feature layers are combined into a unified scoring model:
-
-Each feature group contributes to a weighted score
-The final score is mapped into a market state:
-Score Range	State
-> 0.7	bullish_bias
-0.3 – 0.7	neutral
-< 0.3	bearish_pressure
-📤 Output Format
-
-The system produces structured outputs such as:
-
-BBCA:
-  score: 0.82
-  state: bullish_bias
-  drivers: technical + flow + macro
-
-AMMN:
-  score: 0.34
-  state: bearish_pressure
-  drivers: flow + volatility
-🎯 Design Goals
-
-This system was designed with three priorities:
-
-Simplicity over complexity
-Interpretability over prediction
-Modularity over monolithic design
-🧪 Intended Use Cases
-Market structure research
-Feature engineering experimentation
-System design for financial data
-Educational demonstration of multi-layer analysis
-📌 Limitations
-Uses simplified feature representations
-Does not model order book or real-time execution
-Not optimized for trading performance
-EOD-only data structure
-🚀 Future Extensions (Optional)
-
-Potential extensions include:
-
-higher-resolution intraday data integration
-machine learning-based scoring models
-regime clustering models
-visualization dashboard layer
-👤 Author Context (Optional)
-
-This project is part of a broader exploration into:
-
-data-driven market structure analysis
-operations + analytics systems design
-financial system decomposition using Python
+*The system is designed for structured market observation and research, 
+not trading execution.*
