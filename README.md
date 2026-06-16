@@ -23,7 +23,7 @@ This project is documented in a multi-part article series on Medium.
 It](https://medium.com/@cynthianoor/part-1-why-ihsg-looks-random-until-you-structure-it-a-python-based-eod-market-signal-system-867e72f6cdba) 
 — Architecture and Philosophy
 - **Part 2:** [Building the Confluence 
-Engine](https://medium.com/@cynthianoor/part-2-building-the-confluence-engine-implementation-architecture-and-data-design) 
+Engine](https://medium.com/@cindycynthianoor/part-2-building-the-confluence-engine-implementation-architecture-and-data-design-1826f7877f37) 
 — Implementation and Data Design
  ---
 
