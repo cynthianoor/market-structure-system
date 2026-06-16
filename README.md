@@ -24,9 +24,8 @@ It](https://medium.com/@cynthianoor/part-1-why-ihsg-looks-random-until-you-struc
 — Architecture and Philosophy
 - **Part 2:** [Building the Confluence 
 Engine](https://medium.com/@cynthianoor/part-2-building-the-confluence-engine-implementation-architecture-and-data-design) 
-— Implementation and Data Design *(forthcoming)*
-
----
+— Implementation and Data Design
+ ---
 
 ## System Architecture
 
